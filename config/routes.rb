@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  get 'spell/index'
+  get 'spell/show'
   get 'mastery/index'
   get 'mastery/show'
   get 'location/index'
