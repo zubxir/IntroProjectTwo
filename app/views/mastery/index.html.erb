@@ -1,2 +1,9 @@
-<h1>Mastery#index</h1>
-<p>Find me in app/views/mastery/index.html.erb</p>
+<h1>Masteries of the Champions</h1>
+
+<ul>
+<% @mastery.each do |masteries| %>
+
+<li><%= masteries.masteryname %></li>
+
+<% end %>
+</ul>

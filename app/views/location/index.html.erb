@@ -1,2 +1,9 @@
-<h1>Location#index</h1>
-<p>Find me in app/views/location/index.html.erb</p>
+<h1>Locations of Runeterra</h1>
+
+<ul>
+<% @location.each do |locations| %>
+
+<li><%= locations.locationname %></li>
+
+<% end %>
+</ul>

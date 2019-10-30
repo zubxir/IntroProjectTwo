@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Champion < ApplicationRecord
   belongs_to :location
   belongs_to :mastery

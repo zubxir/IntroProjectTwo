@@ -6,10 +6,10 @@
 <% @champion.each do |t| %>
 <tr>
 <th><%= link_to t.champname, "champion/#{t.id}" %></th>
-<th><%= t.rank.rankname %></th>
-<th><%= t.location.locationname %></th>
-<th><%= t.mastery.masteryname %></th>
-<th><%= t.spell.spellname %></th>
+<th><%= link_to t.rank.rankname, "rank/#{t.rank_id}" %></th>
+<th><%= link_to t.location.locationname, "location/#{t.location_id}" %></th>
+<th><%= link_to t.mastery.masteryname, "mastery/#{t.mastery_id}" %></th>
+<th><%= link_to t.spell.spellname, "spell/#{t.spell_id}" %></th>
 </tr>
 <% end %>
 
