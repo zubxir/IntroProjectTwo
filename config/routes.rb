@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   # get 'rank/index'
   # get 'quotes/index'
   # get 'champions/index'
-  get '/welcome', to: 'welcome#index'
+  get '/welcome', to: 'champion#index'
   get '/about', to: 'about#index'
   get '/champion', to: 'champion#index'
   get '/champion/:id', to: 'champion#show', id: /\d+/

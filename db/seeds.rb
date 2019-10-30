@@ -5,7 +5,7 @@ Quote.destroy_all
 Spell.destroy_all
 Mastery.destroy_all
 Rank.destroy_all
-get a moomChampion.destroy_all
+Champion.destroy_all
 
 37.times do
   Quote.create(
@@ -37,7 +37,7 @@ end
   )
 end
 
-5.times do
+140.times do
   Champion.create(
     champname: Faker::Games::LeagueOfLegends.unique.champion,
     location_id: Faker::Number.within(range: 1..13),

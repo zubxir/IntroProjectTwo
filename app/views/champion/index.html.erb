@@ -1,12 +1,17 @@
 <h1>Champions of League Of Legends</h1>
+<table>
+<caption>Champions</caption>
+
 
 <% @champion.each do |t| %>
-<%= link_to t.champname, "champion/#{t.id}" %>
-<p><%= t.rank.rankname %></p>
-<p><%= t.location.locationname %></p>
-<p><%= t.mastery.masteryname %></p>
-<p><%= t.spell.spellname %></p>
-
-  <ul>
-  </ul>
+<tr>
+<th><%= link_to t.champname, "champion/#{t.id}" %></th>
+<th><%= t.rank.rankname %></th>
+<th><%= t.location.locationname %></th>
+<th><%= t.mastery.masteryname %></th>
+<th><%= t.spell.spellname %></th>
+</tr>
 <% end %>
+
+</table>
+

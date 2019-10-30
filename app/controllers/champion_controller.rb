@@ -6,6 +6,6 @@ class ChampionController < ApplicationController
   end
 
   def index
-    @champion = Champion.all
+    @champion = Champion.all.order(:champname)
   end
 end

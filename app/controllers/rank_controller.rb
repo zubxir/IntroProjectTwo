@@ -2,7 +2,7 @@
 
 class RankController < ApplicationController
   def index
-    @rank = Rank.all
+    @rank = Rank.all.order(:rankname)
   end
 
   def show
