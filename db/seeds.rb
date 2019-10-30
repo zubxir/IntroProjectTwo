@@ -5,7 +5,7 @@ Quote.destroy_all
 Spell.destroy_all
 Mastery.destroy_all
 Rank.destroy_all
-Champion.destroy_all
+get a moomChampion.destroy_all
 
 37.times do
   Quote.create(

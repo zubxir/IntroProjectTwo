@@ -1,8 +1,7 @@
-<h1>Test#show</h1>
-<p>Find me in app/views/champions/show.html.erb</p>
+<h1>Champions of League Of Legends</h1>
 
 <% @champion.each do |t| %>
-<h2><%= t.champname %></h2>
+<%= link_to t.champname, "champion/#{t.id}" %>
 <p><%= t.rank.rankname %></p>
 <p><%= t.location.locationname %></p>
 <p><%= t.mastery.masteryname %></p>
