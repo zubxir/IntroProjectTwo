@@ -4,9 +4,9 @@ Location.destroy_all
 Quote.destroy_all
 Spell.destroy_all
 Mastery.destroy_all
-JobClass.destroy_all
+Jobclass.destroy_all
 Rank.destroy_all
-Champion.destroy_all
+# Champion.destroy_all
 
 # 13.times.do
 #     location = location.create(
@@ -25,13 +25,13 @@ Champion.destroy_all
 # end
 37.times do
   Quote.create(
-    quotetext: Faker::Games::LeagueOfLegends.unique.quote
+    quotename: Faker::Games::LeagueOfLegends.unique.quote
   )
 end
 
 27.times do
   Rank.create(
-    rank: Faker::Games::LeagueOfLegends.unique.rank
+    rankname: Faker::Games::LeagueOfLegends.unique.rank
   )
 end
 
@@ -48,15 +48,15 @@ end
 end
 
 4.times do
-  JobClass.create(
+  Jobclass.create(
     classname: Faker::Games::LeagueOfLegends.unique.champion
   )
 end
 
-13.times do
+4.times do
   Location.create(
     locationname: Faker::Games::LeagueOfLegends.unique.location,
-    jobclassid: Faker::Number.within(range: 1..4)
+    jobclass_id: Faker::Number.within(range: 1..4)
   )
 end
 
@@ -64,5 +64,5 @@ puts "Generated #{Quote.count} quotes."
 puts "Generated #{Rank.count} ranks."
 puts "Generated #{Mastery.count} masteries."
 puts "Generated #{Spell.count} spells."
-puts "Generated #{JobClass.count} classes."
-# puts "Generated #{Location.count} locations."
+puts "Generated #{Jobclass.count} classes."
+puts "Generated #{Location.count} locations."
