@@ -6,6 +6,11 @@ class ChampionController < ApplicationController
   end
 
   def index
-    @champion = Champion.all.order(:champname)
+    if params[:search]
+      character = Champion.where('champname LIKE ?', "%#{params[:search]}%").order(:name).page(params[:page])
+      @champion = character || Champion.order(:name).page(params[:page])
+    else
+      @champion = Champion.order(:champname).page(params[:page])
+    end
   end
 end
