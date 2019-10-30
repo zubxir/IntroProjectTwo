@@ -12,18 +12,10 @@
 
 ActiveRecord::Schema.define(version: 2019_10_30_032306) do
 
-  create_table "jobclasses", force: :cascade do |t|
-    t.string "classname"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "locations", force: :cascade do |t|
     t.string "locationname"
-    t.integer "jobclass_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["jobclass_id"], name: "index_locations_on_jobclass_id"
   end
 
   create_table "masteries", force: :cascade do |t|
@@ -50,5 +42,4 @@ ActiveRecord::Schema.define(version: 2019_10_30_032306) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  add_foreign_key "locations", "jobclasses"
 end
