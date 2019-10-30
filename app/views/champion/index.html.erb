@@ -1,0 +1,13 @@
+<h1>Test#show</h1>
+<p>Find me in app/views/champions/show.html.erb</p>
+
+<% @champion.each do |t| %>
+<h2><%= t.champname %></h2>
+<p><%= t.rank.rankname %></p>
+<p><%= t.location.locationname %></p>
+<p><%= t.mastery.masteryname %></p>
+<p><%= t.spell.spellname %></p>
+
+  <ul>
+  </ul>
+<% end %>

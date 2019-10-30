@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  champname: MyString
+  location: one
+  mastery: one
+  quote: one
+  rank: one
+  spell: one
+
+two:
+  champname: MyString
+  location: two
+  mastery: two
+  quote: two
+  rank: two
+  spell: two
