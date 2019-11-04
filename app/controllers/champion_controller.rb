@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# test
-
 class ChampionController < ApplicationController
   def show
     @champion = Champion.find(params[:id])
