@@ -1,11 +1,19 @@
 <h1>Champions of League Of Legends</h1>
 
 <h4>Search by Champion Name</h4>
+
 <%= form_tag(champion_path, method: :get) do%>
+
+<%= radio_button_tag 'options', 1, false %> Champion
+<%= radio_button_tag 'options', 2, false %> Rank
+<%= radio_button_tag 'options', 3, false %> Location
+<%= radio_button_tag 'options', 4, false %> Mastery
+<%= radio_button_tag 'options', 5, false %> Spell <br/>
 <%= text_field_tag(:search, params[:search]) %>
 <%= submit_tag ("Search") %>
 <% end %>
 <table>
+<br/>
 <caption>Champions</caption>
 
 

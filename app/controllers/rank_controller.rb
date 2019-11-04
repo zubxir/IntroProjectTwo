@@ -7,5 +7,6 @@ class RankController < ApplicationController
 
   def show
     @rank = Rank.find(params[:id])
+    @champion = Champion.find(params[:id])
   end
 end
