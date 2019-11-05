@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# asdasd
 Location.destroy_all
 Quote.destroy_all
 Spell.destroy_all
